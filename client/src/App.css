@@ -1,3 +1,35 @@
+:root {
+  --bg-color: #fff;
+  --danger-color: #f30000;
+  --success-color: #3cff00;
+}
+
+.alert {
+  padding: 0.5rem;
+  margin: 1rem;
+  opacity: 0.9;
+  background: var(--bg-color);
+  color: #333;
+}
+
+.alert-danger {
+  background: var(--danger-color);
+  color: #fff;
+}
+
+.alert-success {
+  background: var(--success-color);
+  color: #fff;
+}
+
+.names {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: solid 1px;
+  border-color: #333;
+}
+
+/*
 .App {
   text-align: center;
 }
@@ -36,3 +68,4 @@
     transform: rotate(360deg);
   }
 }
+*/

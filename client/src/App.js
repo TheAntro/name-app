@@ -1,15 +1,22 @@
 import React, { Fragment } from 'react';
-import {BrowserRouter as Router, Route } from 'react-router-dom';
 import SearchForm from './components/SearchForm';
+import Alert from './components/Alert';
+import Names from './components/Names';
+
+// Redux imports
+import { Provider } from 'react-redux';
+import store from './store';
+
 import './App.css';
 
 const App = () =>
-  <Router>
-    <Fragment>
-      <h1>Front-end tulee tähän</h1>
-      <Route exact path='/' component={SearchForm} />
-    </Fragment>
-  </Router>
+<Provider store={store}>
+  <Fragment>
+    <Alert />
+    <SearchForm />
+    <Names />
+  </Fragment>
+</Provider>
   
 
 export default App;

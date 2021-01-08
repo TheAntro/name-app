@@ -122,11 +122,12 @@ app.get('/names', (req, res) => {
 })
 
 // @route   GET /names/:name
-// @desc    Get the name and amount of a specific name
+// @desc    Get the name and amount of a specific name, returned inside an array for front-end
 // @access  Public
 app.get('/names/:name', (req, res) => {
   let match = db.names.find((item, index) => item.name.toLowerCase() === req.params.name.toLowerCase());
-  return (match ? res.status(200).json(match) : res.status(404).json({"name": "Not Found"}));
+  let arrayWrapperMatch = [match];
+  return (match ? res.status(200).json(arrayWrapperMatch) : res.status(404).json({"name": "Not Found"}));
 })
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
