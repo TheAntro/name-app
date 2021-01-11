@@ -8,6 +8,7 @@ const Names = ({ names }) =>
       <p>{ item.name }: { item.amount} </p>
     </div>
   ))
+  
 Names.propTypes = {
   names: PropTypes.array.isRequired,
 }

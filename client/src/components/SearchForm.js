@@ -1,33 +1,15 @@
 import React, { Fragment, useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import axios from 'axios';
-import { setAlert } from '../actions/alert';
 import { setNames } from '../actions/names';
 
-const SearchForm = ({ setAlert, setNames }) => {
+const SearchForm = ({ setNames }) => {
   const [formData, setFormData] = useState({ query: '' });
   const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const onSubmit = async e => {
+  const onSubmit = e => {
     e.preventDefault();
-    try {
-      const config = {
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      }
-
-      let fullQuery = `http://localhost:5000/${query}`;
-      const res = await axios.get(fullQuery, config)
-      console.log(res);
-      setAlert('Haku onnistui', 'success');
-      setNames(res.data);
-    } catch (err) {
-      console.error(err.response);
-      setAlert('Virhe nimien haussa, tarkista osoite', 'danger');
-      return;
-    }
+    setNames(query);
   }
 
   const { query } = formData;
@@ -53,4 +35,4 @@ SearchForm.propTypes = {
   setNames: PropTypes.func.isRequired,
 }
 
-export default connect(null, { setAlert, setNames })(SearchForm);
+export default connect(null, { setNames })(SearchForm);
