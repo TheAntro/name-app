@@ -21,7 +21,12 @@ export const setNames = (query) => async (dispatch) => {
   }
   catch (err) {
     console.error(err.response);
+    console.log('virhe');
     setAlert('Virhe nimien haussa, tarkista osoite', 'danger');
     return;
   }
+}
+
+export const clearNames = () => dispatch => {
+  dispatch({ type: CLEAR_NAMES });
 }

@@ -12,9 +12,11 @@ import './App.css';
 const App = () =>
 <Provider store={store}>
   <Fragment>
+  {/*<div className='center-horizontal'>*/}
     <Alert />
     <SearchForm />
     <Names />
+  {/*</div>*/}
   </Fragment>
 </Provider>
   
