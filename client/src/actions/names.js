@@ -12,7 +12,6 @@ export const setNames = (query) => async (dispatch) => {
     let fullQuery = `http://localhost:5000/${query}`;
     const res = await axios.get(fullQuery, config)
     const names = res.data;
-    dispatch(setAlert('Haku onnistui', 'success'));
     dispatch({ type: CLEAR_NAMES });
     dispatch({
       type: SET_NAMES,
@@ -22,7 +21,7 @@ export const setNames = (query) => async (dispatch) => {
   catch (err) {
     console.error(err.response);
     console.log('virhe');
-    dispatch(setAlert('Virhe nimien haussa, tarkista osoite', 'danger'));
+    dispatch(setAlert('Virhe haussa, tarkista nimi', 'danger'));
     return;
   }
 }

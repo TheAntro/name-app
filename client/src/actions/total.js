@@ -12,7 +12,6 @@ export const setTotal = () => async (dispatch) => {
     let fullQuery = `http://localhost:5000/names?count=total`;
     const res = await axios.get(fullQuery, config)
     const total = res.data.total;
-    dispatch(setAlert('Haku onnistui', 'success'));
     dispatch({
       type: SET_TOTAL,
       payload: total

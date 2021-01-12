@@ -13,7 +13,6 @@
 
 .alert {
   padding: 0.5rem;
-  margin: 1rem;
   opacity: 0.9;
   background: var(--bg-color);
   color: var(--text-color);
@@ -29,12 +28,9 @@
 
 .names {
   color: var(--text-color);
-  margin: 0.5rem auto;
   padding: 0.5rem;
   border: solid 1px;
   border-color: #333;
-  border-radius: 30px;
-  width: 50%;
   text-align: center;
   font-family: Verdana, sans-serif;
 }
@@ -46,7 +42,6 @@
   padding: 0.4rem;
   background: var(--bg-color);
   border: 2px solid rgb(0, 122, 112);
-  border-radius: 30px;
 }
 
 .btn:hover,
@@ -72,43 +67,11 @@ h1 {
   text-align: center;
 }
 
-/*
-.App {
-  text-align: center;
+.rounded {
+  border-radius: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.medium {
+  width: 50%;
+  margin: 0.5rem auto;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-*/

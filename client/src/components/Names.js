@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 
 const Names = ({ names }) => 
   names !== null && names.length > 0 && names.map(item => (
-    <div key={item.name} className='names'>
+    <div key={item.name} className='names rounded medium'>
       <p>{ item.name }: { item.amount} </p>
     </div>
   ))

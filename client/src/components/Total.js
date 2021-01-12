@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 const Total = ({ total }) => 
   total !== null && total !== 0 && (
     <div className='total'>
-      <p>Nimien yhteismäärä: { total }</p>
+      <h2>Nimien yhteismäärä: { total }</h2>
     </div>
   )
   

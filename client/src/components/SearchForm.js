@@ -35,9 +35,9 @@ const SearchForm = ({ setNames, clearNames, setTotal, clearTotal }) => {
     <Fragment>
       <h1>Solita Dev Akatemia Nimisovellus</h1>
       <div className='btn-group'>
-        <button className='btn' onClick={ e => getNames(e) }>Järjestämättömänä</button>
-        <button className='btn' onClick={ e => getNamesPopular(e) }>Suosion mukaan</button>
-        <button className='btn' onClick={ e => getNamesAlphabetical(e) }>Aakkosjärjestyksessä</button>
+        <button className='btn rounded' onClick={ e => getNames(e) }>Järjestämättömänä</button>
+        <button className='btn rounded' onClick={ e => getNamesPopular(e) }>Suosion mukaan</button>
+        <button className='btn rounded' onClick={ e => getNamesAlphabetical(e) }>Aakkosjärjestyksessä</button>
       </div>
       <div className='btn-group'>
         <form onSubmit={e => onSubmit(e)}>
@@ -48,14 +48,14 @@ const SearchForm = ({ setNames, clearNames, setTotal, clearTotal }) => {
             value={queryName} 
             onChange={e => onChange(e)} 
             required />
-          <input className='btn' type='submit' value='Nimen perusteella' />
+          <input className='btn rounded' type='submit' value='Nimen perusteella' />
         </form>
       </div>
       <div className='btn-group'>
-        <button className='btn' onClick={ e => setTotal(e) }>Nimien yhteismäärä</button>
+        <button className='btn rounded' onClick={ e => setTotal(e) }>Nimien yhteismäärä</button>
       </div>
       <div className='btn-group'>
-        <button className='btn' onClick={ e => clearPage(e) }>Tyhjennä</button>
+        <button className='btn rounded' onClick={ e => clearPage(e) }>Tyhjennä</button>
       </div>
     </Fragment>
   )
