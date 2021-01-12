@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import SearchForm from './components/SearchForm';
 import Alert from './components/Alert';
 import Names from './components/Names';
+import Total from './components/Total';
 
 // Redux imports
 import { Provider } from 'react-redux';
@@ -12,11 +13,10 @@ import './App.css';
 const App = () =>
 <Provider store={store}>
   <Fragment>
-  {/*<div className='center-horizontal'>*/}
     <Alert />
     <SearchForm />
+    <Total />
     <Names />
-  {/*</div>*/}
   </Fragment>
 </Provider>
   

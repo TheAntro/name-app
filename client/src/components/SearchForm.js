@@ -2,8 +2,9 @@ import React, { Fragment, useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { setNames, clearNames } from '../actions/names';
+import { setTotal, clearTotal } from '../actions/total';
 
-const SearchForm = ({ setNames, clearNames }) => {
+const SearchForm = ({ setNames, clearNames, setTotal, clearTotal }) => {
   const [formData, setFormData] = useState({ queryName: '' });
   const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
 
@@ -26,12 +27,13 @@ const SearchForm = ({ setNames, clearNames }) => {
 
   const clearPage = e => {
     clearNames();
+    clearTotal();
   }
 
   const { queryName } = formData;
   return (
     <Fragment>
-      <h1>Hae nimet</h1>
+      <h1>Solita Dev Akatemia Nimisovellus</h1>
       <div className='btn-group'>
         <button className='btn' onClick={ e => getNames(e) }>Järjestämättömänä</button>
         <button className='btn' onClick={ e => getNamesPopular(e) }>Suosion mukaan</button>
@@ -50,6 +52,9 @@ const SearchForm = ({ setNames, clearNames }) => {
         </form>
       </div>
       <div className='btn-group'>
+        <button className='btn' onClick={ e => setTotal(e) }>Nimien yhteismäärä</button>
+      </div>
+      <div className='btn-group'>
         <button className='btn' onClick={ e => clearPage(e) }>Tyhjennä</button>
       </div>
     </Fragment>
@@ -59,6 +64,8 @@ const SearchForm = ({ setNames, clearNames }) => {
 SearchForm.propTypes = {
   setNames: PropTypes.func.isRequired,
   clearNames: PropTypes.func.isRequired,
+  setTotal: PropTypes.func.isRequired,
+  clearTotal: PropTypes.func.isRequired,
 }
 
-export default connect(null, { setNames, clearNames })(SearchForm);
+export default connect(null, { setNames, clearNames, setTotal, clearTotal })(SearchForm);

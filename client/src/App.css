@@ -1,7 +1,9 @@
 :root {
-  --bg-color: #fff;
+  --bg-color: rgb(100, 100, 100);
   --danger-color: #f30000;
   --success-color: #3cff00;
+  --text-color: #ececec;
+  background: #000;
 }
 
 .center-horizontal {
@@ -14,27 +16,32 @@
   margin: 1rem;
   opacity: 0.9;
   background: var(--bg-color);
-  color: #333;
+  color: var(--text-color);
 }
 
 .alert-danger {
   background: var(--danger-color);
-  color: #fff;
 }
 
 .alert-success {
   background: var(--success-color);
-  color: #fff;
 }
 
 .names {
-  margin: 0.5rem;
+  color: var(--text-color);
+  margin: 0.5rem auto;
   padding: 0.5rem;
   border: solid 1px;
   border-color: #333;
+  border-radius: 30px;
+  width: 50%;
+  text-align: center;
+  font-family: Verdana, sans-serif;
 }
 
 .btn {
+  color: var(--text-color);
+  font-family: Verdana, sans-serif;
   margin: 0.3rem;
   padding: 0.4rem;
   background: var(--bg-color);
@@ -54,6 +61,14 @@
 }
 
 h1 {
+  color: var(--text-color);
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+}
+
+.total {
+  color: var(--text-color);
+  font-family: Verdana, sans-serif;
   text-align: center;
 }
 
