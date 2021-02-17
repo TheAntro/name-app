@@ -1,7 +1,7 @@
 {
-  "name": "solita",
+  "name": "name-app",
   "version": "1.0.0",
-  "description": "Exercise for the dev academy 2021",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "node server",
