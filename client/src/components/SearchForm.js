@@ -33,7 +33,7 @@ const SearchForm = ({ setNames, clearNames, setTotal, clearTotal }) => {
   const { queryName } = formData;
   return (
     <Fragment>
-      <h1>Solita Dev Akatemia Nimisovellus</h1>
+      <h1>Nimisovellus</h1>
       <div className='btn-group'>
         <button className='btn rounded' onClick={ e => getNames(e) }>Järjestämättömänä</button>
         <button className='btn rounded' onClick={ e => getNamesPopular(e) }>Suosion mukaan</button>
